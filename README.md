@@ -70,14 +70,16 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     new GuzzleHttp\Client(),
     $config
 );
-$organisation_uuid = 'organisation_uuid_example'; // string | Organisation uuid
-$format = 'format_example'; // string | Output format
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
 
 try {
-    $result = $apiInstance->getAdAccounts($organisation_uuid, $format);
+    $result = $apiInstance->getAdAccountReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AdvertisingDataApi->getAdAccounts: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AdvertisingDataApi->getAdAccountReportPerOrganisationPerDay: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -89,6 +91,7 @@ All URIs are relative to *https://app.cervinodata.com/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AdvertisingDataApi* | [**getAdAccountReportPerOrganisationPerDay**](docs/Api/AdvertisingDataApi.md#getadaccountreportperorganisationperday) | **GET** /data/ad-account-report-per-organisation-per-day/{organisationUuids} | Return ad account report per organisation per day
 *AdvertisingDataApi* | [**getAdAccounts**](docs/Api/AdvertisingDataApi.md#getadaccounts) | **GET** /data/ad-accounts/{organisationUuid} | Return ad accounts by organisation
 *AdvertisingDataApi* | [**getAdCampaignReportPerDay**](docs/Api/AdvertisingDataApi.md#getadcampaignreportperday) | **GET** /data/ad-campaign-report-per-day/{organisationUuid} | Return ad campaign report per day by organisation
 *AdvertisingDataApi* | [**getAdCampaignReportPerOrganisationPerAccountPerDay**](docs/Api/AdvertisingDataApi.md#getadcampaignreportperorganisationperaccountperday) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
