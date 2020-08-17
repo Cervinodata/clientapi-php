@@ -1010,6 +1010,312 @@ class AdvertisingDataApi
     }
 
     /**
+     * Operation getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+     *
+     * Return ad campaign report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        list($response) = $this->getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
+        return $response;
+    }
+
+    /**
+     * Operation getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo
+     *
+     * Return ad campaign report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $request = $this->getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('string' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'string', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'string';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync
+     *
+     * Return ad campaign report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        return $this->getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo
+     *
+     * Return ad campaign report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $returnType = 'string';
+        $request = $this->getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay'
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay'
+            );
+        }
+
+        $resourcePath = '/data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($from_date !== null) {
+            $queryParams['from_date'] = ObjectSerializer::toQueryValue($from_date);
+        }
+        // query params
+        if ($date_format !== null) {
+            $queryParams['date_format'] = ObjectSerializer::toQueryValue($date_format);
+        }
+        // query params
+        if ($format !== null) {
+            $queryParams['format'] = ObjectSerializer::toQueryValue($format);
+        }
+
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['text/csv', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['text/csv', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
+            } else {
+                $httpBody = $_tempBody;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getAdCampaignReportPerOrganisationPerAccountPerDay
      *
      * Return ad campaign report per organisation per account per day
@@ -1537,6 +1843,618 @@ class AdvertisingDataApi
             $resourcePath = str_replace(
                 '{' . 'organisationUuid' . '}',
                 ObjectSerializer::toPathValue($organisation_uuid),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['text/csv', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['text/csv', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
+            } else {
+                $httpBody = $_tempBody;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+     *
+     * Return facebook ad extended report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        list($response) = $this->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
+        return $response;
+    }
+
+    /**
+     * Operation getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo
+     *
+     * Return facebook ad extended report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $request = $this->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('string' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'string', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'string';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync
+     *
+     * Return facebook ad extended report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        return $this->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo
+     *
+     * Return facebook ad extended report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $returnType = 'string';
+        $request = $this->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay'
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay'
+            );
+        }
+
+        $resourcePath = '/data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($from_date !== null) {
+            $queryParams['from_date'] = ObjectSerializer::toQueryValue($from_date);
+        }
+        // query params
+        if ($date_format !== null) {
+            $queryParams['date_format'] = ObjectSerializer::toQueryValue($date_format);
+        }
+        // query params
+        if ($format !== null) {
+            $queryParams['format'] = ObjectSerializer::toQueryValue($format);
+        }
+
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['text/csv', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['text/csv', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
+            } else {
+                $httpBody = $_tempBody;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+     *
+     * Return google ads report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        list($response) = $this->getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
+        return $response;
+    }
+
+    /**
+     * Operation getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo
+     *
+     * Return google ads report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $request = $this->getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('string' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'string', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'string';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync
+     *
+     * Return google ads report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        return $this->getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo
+     *
+     * Return google ads report per organisation per account per campaign per device per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $returnType = 'string';
+        $request = $this->getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay'
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay'
+            );
+        }
+
+        $resourcePath = '/data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($from_date !== null) {
+            $queryParams['from_date'] = ObjectSerializer::toQueryValue($from_date);
+        }
+        // query params
+        if ($date_format !== null) {
+            $queryParams['date_format'] = ObjectSerializer::toQueryValue($date_format);
+        }
+        // query params
+        if ($format !== null) {
+            $queryParams['format'] = ObjectSerializer::toQueryValue($format);
+        }
+
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
                 $resourcePath
             );
         }

@@ -7,8 +7,11 @@ Method | HTTP request | Description
 [**getAdAccountReportPerOrganisationPerDay**](AdvertisingDataApi.md#getAdAccountReportPerOrganisationPerDay) | **GET** /data/ad-account-report-per-organisation-per-day/{organisationUuids} | Return ad account report per organisation per day
 [**getAdAccounts**](AdvertisingDataApi.md#getAdAccounts) | **GET** /data/ad-accounts/{organisationUuid} | Return ad accounts by organisation
 [**getAdCampaignReportPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerDay) | **GET** /data/ad-campaign-report-per-day/{organisationUuid} | Return ad campaign report per day by organisation
+[**getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return ad campaign report per organisation per account per campaign per device per day
 [**getAdCampaignReportPerOrganisationPerAccountPerDay**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 [**getAdCampaigns**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
+[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day
+[**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day
 
 
 
@@ -209,6 +212,73 @@ Name | Type | Description  | Notes
 [[Back to README]](../../README.md)
 
 
+## getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+
+> string getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date, $date_format, $format)
+
+Return ad campaign report per organisation per account per campaign per device per day
+
+Ad campaign report per organisation per account per campaign per device per day
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AdvertisingDataApi->getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
 ## getAdCampaignReportPerOrganisationPerAccountPerDay
 
 > string getAdCampaignReportPerOrganisationPerAccountPerDay($organisation_uuids, $from_date, $date_format, $format)
@@ -322,6 +392,140 @@ Name | Type | Description  | Notes
  **organisation_uuid** | **string**| Organisation uuid |
  **from_date** | **\DateTime**| From date | [optional]
  **format** | **string**| Output format | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+
+> string getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date, $date_format, $format)
+
+Return facebook ad extended report per organisation per account per campaign per device per day
+
+Facebook ad extended report per organisation per account per campaign per device per day
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AdvertisingDataApi->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/csv, application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay
+
+> string getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date, $date_format, $format)
+
+Return google ads report per organisation per account per campaign per device per day
+
+Campaign group google ads report per organisation per account per campaign per device per day
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AdvertisingDataApi->getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
 
 ### Return type
 
