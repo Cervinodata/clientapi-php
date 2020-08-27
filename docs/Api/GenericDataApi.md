@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getCampaignGroups
 
-> object[] getCampaignGroups()
+> mixed[] getCampaignGroups()
 
 Return campaign groups
 
@@ -50,7 +50,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object[]**
+**mixed[]**
 
 ### Authorization
 
