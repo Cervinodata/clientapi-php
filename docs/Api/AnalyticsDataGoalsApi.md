@@ -1,19 +1,20 @@
 # OpenAPI\Client\AnalyticsDataGoalsApi
 
-All URIs are relative to *https://app.cervinodata.com/api/v1*
+All URIs are relative to https://app.cervinodata.com/api/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAnalyticsGoalReportPerCampaignPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerCampaignPerDay) | **GET** /data/analytics-goal-report-per-campaign-per-day/{organisationUuid} | Return analytics goal report per campaign per day by organisation
-[**getAnalyticsGoalReportPerChannelGroupPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerChannelGroupPerDay) | **GET** /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid} | Return analytics goal report per channel group per day by organisation
-[**getAnalyticsGoalReportPerDevicePerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerDevicePerDay) | **GET** /data/analytics-goal-report-per-device-per-day/{organisationUuid} | Return analytics goal report per device per day by organisation
-[**getAnalyticsGoalReportPerSourceMediumPerDay**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerSourceMediumPerDay) | **GET** /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid} | Return analytics goal report per source medium per day by organisation
+[**getAnalyticsGoalReportPerCampaignPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerCampaignPerDay) | **GET** /data/analytics-goal-report-per-campaign-per-day/{organisationUuid} | Return analytics goal report per campaign per day by organisation
+[**getAnalyticsGoalReportPerChannelGroupPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerChannelGroupPerDay) | **GET** /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid} | Return analytics goal report per channel group per day by organisation
+[**getAnalyticsGoalReportPerDevicePerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerDevicePerDay) | **GET** /data/analytics-goal-report-per-device-per-day/{organisationUuid} | Return analytics goal report per device per day by organisation
+[**getAnalyticsGoalReportPerSourceMediumPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerSourceMediumPerDay) | **GET** /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid} | Return analytics goal report per source medium per day by organisation
 
 
+## `getAnalyticsGoalReportPerCampaignPerDay()`
 
-## getAnalyticsGoalReportPerCampaignPerDay
-
-> string getAnalyticsGoalReportPerCampaignPerDay($organisation_uuid, $from_date, $date_format, $format)
+```php
+getAnalyticsGoalReportPerCampaignPerDay($organisation_uuid, $from_date, $date_format, $format): string
+```
 
 Return analytics goal report per campaign per day by organisation
 
@@ -47,11 +48,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AnalyticsDataGoalsApi->getAnalyticsGoalReportPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -71,16 +70,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAnalyticsGoalReportPerChannelGroupPerDay()`
 
-## getAnalyticsGoalReportPerChannelGroupPerDay
-
-> string getAnalyticsGoalReportPerChannelGroupPerDay($organisation_uuid, $from_date, $date_format, $format)
+```php
+getAnalyticsGoalReportPerChannelGroupPerDay($organisation_uuid, $from_date, $date_format, $format): string
+```
 
 Return analytics goal report per channel group per day by organisation
 
@@ -114,11 +114,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AnalyticsDataGoalsApi->getAnalyticsGoalReportPerChannelGroupPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -138,16 +136,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAnalyticsGoalReportPerDevicePerDay()`
 
-## getAnalyticsGoalReportPerDevicePerDay
-
-> string getAnalyticsGoalReportPerDevicePerDay($organisation_uuid, $from_date, $date_format, $format)
+```php
+getAnalyticsGoalReportPerDevicePerDay($organisation_uuid, $from_date, $date_format, $format): string
+```
 
 Return analytics goal report per device per day by organisation
 
@@ -181,11 +180,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AnalyticsDataGoalsApi->getAnalyticsGoalReportPerDevicePerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -205,16 +202,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAnalyticsGoalReportPerSourceMediumPerDay()`
 
-## getAnalyticsGoalReportPerSourceMediumPerDay
-
-> string getAnalyticsGoalReportPerSourceMediumPerDay($organisation_uuid, $from_date, $date_format, $format)
+```php
+getAnalyticsGoalReportPerSourceMediumPerDay($organisation_uuid, $from_date, $date_format, $format): string
+```
 
 Return analytics goal report per source medium per day by organisation
 
@@ -248,11 +246,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling AnalyticsDataGoalsApi->getAnalyticsGoalReportPerSourceMediumPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -272,9 +268,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

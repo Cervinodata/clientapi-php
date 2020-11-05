@@ -1,26 +1,27 @@
 # OpenAPI\Client\CampaignGroupApi
 
-All URIs are relative to *https://app.cervinodata.com/api/v1*
+All URIs are relative to https://app.cervinodata.com/api/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day
-[**getCampaignGroupAdReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day
-[**getCampaignGroupAnalyticsReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day
-[**getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group bing ads extended report per organisation per account per campaign per day
-[**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per campaign per day
-[**getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad report per organisation per campaign per day
-[**getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group google ads report per organisation per campaign per day
-[**getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group linkedin ads extended report per organisation per account per campaign per day
-[**getCampaignGroupReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupReportPerOrganisationPerDay) | **GET** /data/campaign-group-report-per-organisation-per-day/{organisationUuids} | Return campaign group report per organisation per day
-[**getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group video report per organisation per campaign per day
-[**getCampaignGroupVideoReportPerOrganisationPerDay**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids} | Return campaign group video report per organisation per day
+[**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day
+[**getCampaignGroupAdReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day
+[**getCampaignGroupAnalyticsReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day
+[**getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group bing ads extended report per organisation per account per campaign per day
+[**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per campaign per day
+[**getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad report per organisation per campaign per day
+[**getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group google ads report per organisation per campaign per day
+[**getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group linkedin ads extended report per organisation per account per campaign per day
+[**getCampaignGroupReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupReportPerOrganisationPerDay) | **GET** /data/campaign-group-report-per-organisation-per-day/{organisationUuids} | Return campaign group report per organisation per day
+[**getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group video report per organisation per campaign per day
+[**getCampaignGroupVideoReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids} | Return campaign group video report per organisation per day
 
 
+## `getCampaignGroupAdReportPerOrganisationPerCampaignPerDay()`
 
-## getCampaignGroupAdReportPerOrganisationPerCampaignPerDay
-
-> string getCampaignGroupAdReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupAdReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group ad report per organisation per campaign per day
 
@@ -54,11 +55,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupAdReportPerOrganisationPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -78,16 +77,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupAdReportPerOrganisationPerDay()`
 
-## getCampaignGroupAdReportPerOrganisationPerDay
-
-> string getCampaignGroupAdReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupAdReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group ad report per organisation per day
 
@@ -121,11 +121,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupAdReportPerOrganisationPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -145,16 +143,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupAnalyticsReportPerOrganisationPerDay()`
 
-## getCampaignGroupAnalyticsReportPerOrganisationPerDay
-
-> string getCampaignGroupAnalyticsReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupAnalyticsReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group analytics report per organisation per day
 
@@ -188,11 +187,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupAnalyticsReportPerOrganisationPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -212,16 +209,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()`
 
-## getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
-
-> string getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group bing ads extended report per organisation per account per campaign per day
 
@@ -255,11 +253,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -279,16 +275,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay()`
 
-## getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay
-
-> string getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group facebook ad extended report per organisation per campaign per day
 
@@ -322,11 +319,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -346,16 +341,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay()`
 
-## getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay
-
-> string getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group facebook ad report per organisation per campaign per day
 
@@ -389,11 +385,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -413,16 +407,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay()`
 
-## getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay
-
-> string getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group google ads report per organisation per campaign per day
 
@@ -456,11 +451,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -480,16 +473,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()`
 
-## getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
-
-> string getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group linkedin ads extended report per organisation per account per campaign per day
 
@@ -523,11 +517,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -547,16 +539,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupReportPerOrganisationPerDay()`
 
-## getCampaignGroupReportPerOrganisationPerDay
-
-> string getCampaignGroupReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group report per organisation per day
 
@@ -590,11 +583,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupReportPerOrganisationPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -614,16 +605,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay()`
 
-## getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay
-
-> string getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group video report per organisation per campaign per day
 
@@ -657,11 +649,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -681,16 +671,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCampaignGroupVideoReportPerOrganisationPerDay()`
 
-## getCampaignGroupVideoReportPerOrganisationPerDay
-
-> string getCampaignGroupVideoReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format)
+```php
+getCampaignGroupVideoReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
 
 Return campaign group video report per organisation per day
 
@@ -724,11 +715,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling CampaignGroupApi->getCampaignGroupVideoReportPerOrganisationPerDay: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -748,9 +737,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

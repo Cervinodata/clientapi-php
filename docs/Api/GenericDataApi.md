@@ -1,17 +1,18 @@
 # OpenAPI\Client\GenericDataApi
 
-All URIs are relative to *https://app.cervinodata.com/api/v1*
+All URIs are relative to https://app.cervinodata.com/api/v1.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCampaignGroups**](GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups
-[**getOrganisations**](GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations
+[**getCampaignGroups()**](GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups
+[**getOrganisations()**](GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations
 
 
+## `getCampaignGroups()`
 
-## getCampaignGroups
-
-> mixed[] getCampaignGroups()
+```php
+getCampaignGroups(): mixed[]
+```
 
 Return campaign groups
 
@@ -41,7 +42,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GenericDataApi->getCampaignGroups: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -59,16 +59,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getOrganisations()`
 
-## getOrganisations
-
-> string getOrganisations($format)
+```php
+getOrganisations($format): string
+```
 
 Return organisations
 
@@ -99,11 +100,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GenericDataApi->getOrganisations: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -120,9 +119,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv, application/json
+- **Accept**: `text/csv`, `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -73,34 +73,34 @@ class CampaignGroupApi
      * @param ClientInterface $client
      * @param Configuration   $config
      * @param HeaderSelector  $selector
-     * @param int             $host_index (Optional) host index to select the list of hosts if defined in the OpenAPI spec
+     * @param int             $hostIndex (Optional) host index to select the list of hosts if defined in the OpenAPI spec
      */
     public function __construct(
         ClientInterface $client = null,
         Configuration $config = null,
         HeaderSelector $selector = null,
-        $host_index = 0
+        $hostIndex = 0
     ) {
         $this->client = $client ?: new Client();
         $this->config = $config ?: new Configuration();
         $this->headerSelector = $selector ?: new HeaderSelector();
-        $this->hostIndex = $host_index;
+        $this->hostIndex = $hostIndex;
     }
 
     /**
      * Set the host index
      *
-     * @param  int Host index (required)
+     * @param int $hostIndex Host index (required)
      */
-    public function setHostIndex($host_index)
+    public function setHostIndex($hostIndex)
     {
-        $this->hostIndex = $host_index;
+        $this->hostIndex = $hostIndex;
     }
 
     /**
      * Get the host index
      *
-     * @return Host index
+     * @return int Host index
      */
     public function getHostIndex()
     {
@@ -312,7 +312,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupAdReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAdReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -375,8 +375,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -390,14 +388,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -643,7 +634,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupAdReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAdReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -706,8 +697,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -721,14 +710,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -974,7 +956,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupAnalyticsReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAnalyticsReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -1037,8 +1019,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1052,14 +1032,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1305,7 +1278,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -1368,8 +1341,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1383,14 +1354,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1636,7 +1600,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -1699,8 +1663,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1714,14 +1676,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1967,7 +1922,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -2030,8 +1985,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2045,14 +1998,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -2298,7 +2244,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -2361,8 +2307,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2376,14 +2320,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -2629,7 +2566,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -2692,8 +2629,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2707,14 +2642,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -2960,7 +2888,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -3023,8 +2951,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3038,14 +2964,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -3291,7 +3210,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupVideoReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -3354,8 +3273,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3369,14 +3286,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -3622,7 +3532,7 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getCampaignGroupVideoReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupVideoReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -3685,8 +3595,6 @@ class CampaignGroupApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3700,14 +3608,7 @@ class CampaignGroupApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {

@@ -73,34 +73,34 @@ class AnalyticsDataDefaultMetricsApi
      * @param ClientInterface $client
      * @param Configuration   $config
      * @param HeaderSelector  $selector
-     * @param int             $host_index (Optional) host index to select the list of hosts if defined in the OpenAPI spec
+     * @param int             $hostIndex (Optional) host index to select the list of hosts if defined in the OpenAPI spec
      */
     public function __construct(
         ClientInterface $client = null,
         Configuration $config = null,
         HeaderSelector $selector = null,
-        $host_index = 0
+        $hostIndex = 0
     ) {
         $this->client = $client ?: new Client();
         $this->config = $config ?: new Configuration();
         $this->headerSelector = $selector ?: new HeaderSelector();
-        $this->hostIndex = $host_index;
+        $this->hostIndex = $hostIndex;
     }
 
     /**
      * Set the host index
      *
-     * @param  int Host index (required)
+     * @param int $hostIndex Host index (required)
      */
-    public function setHostIndex($host_index)
+    public function setHostIndex($hostIndex)
     {
-        $this->hostIndex = $host_index;
+        $this->hostIndex = $hostIndex;
     }
 
     /**
      * Get the host index
      *
-     * @return Host index
+     * @return int Host index
      */
     public function getHostIndex()
     {
@@ -312,7 +312,7 @@ class AnalyticsDataDefaultMetricsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAnalyticsReportPerCampaignPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
+    public function getAnalyticsReportPerCampaignPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuid' is set
         if ($organisation_uuid === null || (is_array($organisation_uuid) && count($organisation_uuid) === 0)) {
@@ -372,8 +372,6 @@ class AnalyticsDataDefaultMetricsApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -387,14 +385,7 @@ class AnalyticsDataDefaultMetricsApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -640,7 +631,7 @@ class AnalyticsDataDefaultMetricsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAnalyticsReportPerChannelGroupPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
+    public function getAnalyticsReportPerChannelGroupPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuid' is set
         if ($organisation_uuid === null || (is_array($organisation_uuid) && count($organisation_uuid) === 0)) {
@@ -700,8 +691,6 @@ class AnalyticsDataDefaultMetricsApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -715,14 +704,7 @@ class AnalyticsDataDefaultMetricsApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -968,7 +950,7 @@ class AnalyticsDataDefaultMetricsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -1031,8 +1013,6 @@ class AnalyticsDataDefaultMetricsApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1046,14 +1026,7 @@ class AnalyticsDataDefaultMetricsApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1299,7 +1272,7 @@ class AnalyticsDataDefaultMetricsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAnalyticsReportPerDevicePerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
+    public function getAnalyticsReportPerDevicePerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuid' is set
         if ($organisation_uuid === null || (is_array($organisation_uuid) && count($organisation_uuid) === 0)) {
@@ -1359,8 +1332,6 @@ class AnalyticsDataDefaultMetricsApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1374,14 +1345,7 @@ class AnalyticsDataDefaultMetricsApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1627,7 +1591,7 @@ class AnalyticsDataDefaultMetricsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAnalyticsReportPerSourceMediumPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
+    public function getAnalyticsReportPerSourceMediumPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuid' is set
         if ($organisation_uuid === null || (is_array($organisation_uuid) && count($organisation_uuid) === 0)) {
@@ -1687,8 +1651,6 @@ class AnalyticsDataDefaultMetricsApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1702,14 +1664,7 @@ class AnalyticsDataDefaultMetricsApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {

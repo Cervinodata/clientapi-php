@@ -73,34 +73,34 @@ class AdvertisingDataApi
      * @param ClientInterface $client
      * @param Configuration   $config
      * @param HeaderSelector  $selector
-     * @param int             $host_index (Optional) host index to select the list of hosts if defined in the OpenAPI spec
+     * @param int             $hostIndex (Optional) host index to select the list of hosts if defined in the OpenAPI spec
      */
     public function __construct(
         ClientInterface $client = null,
         Configuration $config = null,
         HeaderSelector $selector = null,
-        $host_index = 0
+        $hostIndex = 0
     ) {
         $this->client = $client ?: new Client();
         $this->config = $config ?: new Configuration();
         $this->headerSelector = $selector ?: new HeaderSelector();
-        $this->hostIndex = $host_index;
+        $this->hostIndex = $hostIndex;
     }
 
     /**
      * Set the host index
      *
-     * @param  int Host index (required)
+     * @param int $hostIndex Host index (required)
      */
-    public function setHostIndex($host_index)
+    public function setHostIndex($hostIndex)
     {
-        $this->hostIndex = $host_index;
+        $this->hostIndex = $hostIndex;
     }
 
     /**
      * Get the host index
      *
-     * @return Host index
+     * @return int Host index
      */
     public function getHostIndex()
     {
@@ -312,7 +312,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAdAccountReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getAdAccountReportPerOrganisationPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -375,8 +375,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -390,14 +388,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -633,7 +624,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAdAccountsRequest($organisation_uuid, $format = null)
+    public function getAdAccountsRequest($organisation_uuid, $format = null)
     {
         // verify the required parameter 'organisation_uuid' is set
         if ($organisation_uuid === null || (is_array($organisation_uuid) && count($organisation_uuid) === 0)) {
@@ -671,8 +662,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -686,14 +675,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -939,7 +921,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAdCampaignReportPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
+    public function getAdCampaignReportPerDayRequest($organisation_uuid, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuid' is set
         if ($organisation_uuid === null || (is_array($organisation_uuid) && count($organisation_uuid) === 0)) {
@@ -999,8 +981,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1014,14 +994,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1267,7 +1240,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -1330,8 +1303,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1345,14 +1316,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1598,7 +1562,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAdCampaignReportPerOrganisationPerAccountPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getAdCampaignReportPerOrganisationPerAccountPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -1661,8 +1625,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1676,14 +1638,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1924,7 +1879,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getAdCampaignsRequest($organisation_uuid, $from_date = null, $format = null)
+    public function getAdCampaignsRequest($organisation_uuid, $from_date = null, $format = null)
     {
         // verify the required parameter 'organisation_uuid' is set
         if ($organisation_uuid === null || (is_array($organisation_uuid) && count($organisation_uuid) === 0)) {
@@ -1973,8 +1928,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1988,14 +1941,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -2241,7 +2187,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -2304,8 +2250,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2319,14 +2263,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -2572,7 +2509,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -2635,8 +2572,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2650,14 +2585,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -2903,7 +2831,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -2966,8 +2894,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -2981,14 +2907,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -3234,7 +3153,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -3297,8 +3216,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3312,14 +3229,7 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
-            } else {
-                $httpBody = $_tempBody;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -3565,7 +3475,7 @@ class AdvertisingDataApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
@@ -3628,8 +3538,6 @@ class AdvertisingDataApi
             );
         }
 
-        // body params
-        $_tempBody = null;
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -3643,14 +3551,651 @@ class AdvertisingDataApi
         }
 
         // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            if ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($_tempBody));
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
             } else {
-                $httpBody = $_tempBody;
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
             }
-        } elseif (count($formParams) > 0) {
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+     *
+     * Return snapchat ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        list($response) = $this->getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
+        return $response;
+    }
+
+    /**
+     * Operation getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo
+     *
+     * Return snapchat ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $request = $this->getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('string' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'string', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'string';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync
+     *
+     * Return snapchat ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        return $this->getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo
+     *
+     * Return snapchat ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $returnType = 'string';
+        $request = $this->getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay'
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay'
+            );
+        }
+
+        $resourcePath = '/data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($from_date !== null) {
+            if('form' === 'form' && is_array($from_date)) {
+                foreach($from_date as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['from_date'] = $from_date;
+            }
+        }
+        // query params
+        if ($date_format !== null) {
+            if('form' === 'form' && is_array($date_format)) {
+                foreach($date_format as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['date_format'] = $date_format;
+            }
+        }
+        // query params
+        if ($format !== null) {
+            if('form' === 'form' && is_array($format)) {
+                foreach($format as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['format'] = $format;
+            }
+        }
+
+
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['text/csv', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['text/csv', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay
+     *
+     * Return twitter ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        list($response) = $this->getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
+        return $response;
+    }
+
+    /**
+     * Operation getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo
+     *
+     * Return twitter ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $request = $this->getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('string' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'string', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'string';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync
+     *
+     * Return twitter ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        return $this->getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo
+     *
+     * Return twitter ads extended report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $returnType = 'string';
+        $request = $this->getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay'
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay'
+            );
+        }
+
+        $resourcePath = '/data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($from_date !== null) {
+            if('form' === 'form' && is_array($from_date)) {
+                foreach($from_date as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['from_date'] = $from_date;
+            }
+        }
+        // query params
+        if ($date_format !== null) {
+            if('form' === 'form' && is_array($date_format)) {
+                foreach($date_format as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['date_format'] = $date_format;
+            }
+        }
+        // query params
+        if ($format !== null) {
+            if('form' === 'form' && is_array($format)) {
+                foreach($format as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['format'] = $format;
+            }
+        }
+
+
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['text/csv', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['text/csv', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
