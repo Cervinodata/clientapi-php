@@ -1404,6 +1404,328 @@ class CampaignGroupApi
     }
 
     /**
+     * Operation getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay
+     *
+     * Return campaign group doubleclick bid manager report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        list($response) = $this->getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
+        return $response;
+    }
+
+    /**
+     * Operation getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo
+     *
+     * Return campaign group doubleclick bid manager report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $request = $this->getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            switch($statusCode) {
+                case 200:
+                    if ('string' === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'string', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'string';
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = (string) $responseBody;
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayAsync
+     *
+     * Return campaign group doubleclick bid manager report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        return $this->getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo
+     *
+     * Return campaign group doubleclick bid manager report per organisation per account per campaign per day
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        $returnType = 'string';
+        $request = $this->getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = (string) $responseBody;
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay'
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  \DateTime $from_date From date (optional)
+     * @param  string $date_format Outputted date format (optional)
+     * @param  string $format Output format (use csv for large result sets) (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    {
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay'
+            );
+        }
+
+        $resourcePath = '/data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($from_date !== null) {
+            if('form' === 'form' && is_array($from_date)) {
+                foreach($from_date as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['from_date'] = $from_date;
+            }
+        }
+        // query params
+        if ($date_format !== null) {
+            if('form' === 'form' && is_array($date_format)) {
+                foreach($date_format as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['date_format'] = $date_format;
+            }
+        }
+        // query params
+        if ($format !== null) {
+            if('form' === 'form' && is_array($format)) {
+                foreach($format as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['format'] = $format;
+            }
+        }
+
+
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['text/csv', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['text/csv', 'application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay
      *
      * Return campaign group doubleclick campaign manager report per organisation per account per campaign per day
