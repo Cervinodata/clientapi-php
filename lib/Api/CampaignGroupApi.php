@@ -2575,7 +2575,7 @@ class CampaignGroupApi
             );
         }
 
-        $resourcePath = '/data/campaign-group-facebook-ad-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}';
+        $resourcePath = '/data/campaign-group-facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
