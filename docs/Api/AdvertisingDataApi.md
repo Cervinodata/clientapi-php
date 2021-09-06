@@ -30,7 +30,7 @@ getAdAccountReportPerOrganisationPerDay($organisation_uuids, $from_date, $date_f
 
 Return ad account report per organisation per day
 
-Ad account report per organisation  per day
+Ad account report per organisation per day
 
 ### Example
 
