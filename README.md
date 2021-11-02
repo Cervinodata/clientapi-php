@@ -39,11 +39,11 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/cervinodata/clientapi-php.git"
+      "url": "https://github.com/cervinodata/php.git"
     }
   ],
   "require": {
-    "cervinodata/clientapi-php": "*@dev"
+    "cervinodata/php": "*@dev"
   }
 }
 ```
@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
 *AdvertisingDataApi* | [**getAdCampaignReportPerOrganisationPerAccountPerCampaignPerDevicePerDay**](docs/Api/AdvertisingDataApi.md#getadcampaignreportperorganisationperaccountpercampaignperdeviceperday) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return ad campaign report per organisation per account per campaign per device per day
 *AdvertisingDataApi* | [**getAdCampaignReportPerOrganisationPerAccountPerDay**](docs/Api/AdvertisingDataApi.md#getadcampaignreportperorganisationperaccountperday) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 *AdvertisingDataApi* | [**getAdCampaigns**](docs/Api/AdvertisingDataApi.md#getadcampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
+*AdvertisingDataApi* | [**getAdGroups**](docs/Api/AdvertisingDataApi.md#getadgroups) | **GET** /data/ad-groups/{organisationUuid} | Return ad groups by organisation
 *AdvertisingDataApi* | [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay**](docs/Api/AdvertisingDataApi.md#getbingadsextendedreportperorganisationperaccountpercampaignperday) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
 *AdvertisingDataApi* | [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay**](docs/Api/AdvertisingDataApi.md#getfacebookadcustomconversionreportperorganisationperaccountpercampaignperday) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
 *AdvertisingDataApi* | [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay**](docs/Api/AdvertisingDataApi.md#getfacebookadextendedreportperorganisationperaccountpercampaignperadgroupperday) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day
