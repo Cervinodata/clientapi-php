@@ -14,14 +14,17 @@ Method | HTTP request | Description
 [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
 [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay()**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day
+[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus()**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day plus
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay()**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad per day
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day
+[**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus()**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-day-plus/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per day plus
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay()**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per device per day
 [**getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay()**](AdvertisingDataApi.md#getGoogleAdsReportPerOrganisationPerAccountPerCampaignPerDevicePerDay) | **GET** /data/google-ads-report-per-organisation-per-account-per-campaign-per-device-per-day/{organisationUuids} | Return google ads report per organisation per account per campaign per device per day
 [**getHashedAdCampaignReportPerOrganisationPerAccountPerDay()**](AdvertisingDataApi.md#getHashedAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/hashed-ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return hashed ad campaign report per organisation per account per day
 [**getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return linkedin ads extended report per organisation per account per campaign per day
 [**getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return pinterest ads extended report per organisation per account per campaign per day
 [**getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return snapchat ads extended report per organisation per account per campaign per day
+[**getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return tiktok ads extended report per organisation per account per campaign per day
 [**getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return twitter ads extended report per organisation per account per campaign per day
 
 
@@ -677,6 +680,72 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus()`
+
+```php
+getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus($organisation_uuids, $from_date, $date_format, $format): string
+```
+
+Return facebook ad extended report per organisation per account per campaign per ad group per day plus
+
+Facebook ad extended report per organisation per account per campaign per ad group per day plus
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AdvertisingDataApi->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDayPlus: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/csv`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay()`
 
 ```php
@@ -780,6 +849,72 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdvertisingDataApi->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/csv`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus()`
+
+```php
+getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus($organisation_uuids, $from_date, $date_format, $format): string
+```
+
+Return facebook ad extended report per organisation per account per campaign per day plus
+
+Facebook ad extended report per organisation per account per campaign per day plus
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AdvertisingDataApi->getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerDayPlus: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1176,6 +1311,72 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdvertisingDataApi->getSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/csv`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()`
+
+```php
+getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
+
+Return tiktok ads extended report per organisation per account per campaign per day
+
+TikTok ads extended report per organisation per account per campaign per day
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AdvertisingDataApi->getTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
