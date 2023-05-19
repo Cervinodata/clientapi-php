@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay) | **GET** /data/analytics-report-per-device-per-channel-group-per-organisation-per-view-per-day/{organisationUuids} | Return analytics report per device per channel group per organisation per view per day
 [**getAnalyticsReportPerDevicePerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerDay) | **GET** /data/analytics-report-per-device-per-day/{organisationUuid} | Return analytics report per device per day by organisation
 [**getAnalyticsReportPerSourceMediumPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerSourceMediumPerDay) | **GET** /data/analytics-report-per-source-medium-per-day/{organisationUuid} | Return analytics report per source medium per day by organisation
+[**getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay()**](AnalyticsDataDefaultMetricsApi.md#getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay) | **GET** /data/ga4-report-per-device-per-channel-group-per-organisation-per-property-per-day/{organisationUuids} | Return GA4 report per device per channel group per organisation per property per day
 
 
 ## `getAnalyticsReportPerCampaignPerDay()`
@@ -320,6 +321,72 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organisation_uuid** | **string**| Organisation uuid |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/csv`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay()`
+
+```php
+getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
+
+Return GA4 report per device per channel group per organisation per property per day
+
+GA4 report per device per channel group per organisation per property per day
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AnalyticsDataDefaultMetricsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AnalyticsDataDefaultMetricsApi->getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
  **from_date** | **\DateTime**| From date | [optional]
  **date_format** | **string**| Outputted date format | [optional]
  **format** | **string**| Output format (use csv for large result sets) | [optional]
