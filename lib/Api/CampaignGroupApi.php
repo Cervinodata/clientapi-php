@@ -1095,9 +1095,9 @@ class CampaignGroupApi
     }
 
     /**
-     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay
+     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay
      *
-     * Return campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day
      *
      * @param  string[] $organisation_uuids Organisation uuids (required)
      * @param  \DateTime $from_date From date (optional)
@@ -1108,16 +1108,16 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return string
      */
-    public function getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
-        list($response) = $this->getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
+        list($response) = $this->getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date, $date_format, $format);
         return $response;
     }
 
     /**
-     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo
+     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo
      *
-     * Return campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day
      *
      * @param  string[] $organisation_uuids Organisation uuids (required)
      * @param  \DateTime $from_date From date (optional)
@@ -1128,9 +1128,9 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
-        $request = $this->getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+        $request = $this->getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1211,9 +1211,9 @@ class CampaignGroupApi
     }
 
     /**
-     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayAsync
+     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync
      *
-     * Return campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day
      *
      * @param  string[] $organisation_uuids Organisation uuids (required)
      * @param  \DateTime $from_date From date (optional)
@@ -1223,9 +1223,9 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsync($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
-        return $this->getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
+        return $this->getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date, $date_format, $format)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1234,9 +1234,9 @@ class CampaignGroupApi
     }
 
     /**
-     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayAsyncWithHttpInfo
+     * Operation getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo
      *
-     * Return campaign group adform extended report per organisation per campaign per day
+     * Return campaign group adform extended report per organisation per account per campaign per day
      *
      * @param  string[] $organisation_uuids Organisation uuids (required)
      * @param  \DateTime $from_date From date (optional)
@@ -1246,10 +1246,10 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayAsyncWithHttpInfo($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         $returnType = 'string';
-        $request = $this->getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
+        $request = $this->getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date, $date_format, $format);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1285,7 +1285,7 @@ class CampaignGroupApi
     }
 
     /**
-     * Create request for operation 'getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay'
+     * Create request for operation 'getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay'
      *
      * @param  string[] $organisation_uuids Organisation uuids (required)
      * @param  \DateTime $from_date From date (optional)
@@ -1295,16 +1295,16 @@ class CampaignGroupApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
+    public function getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDayRequest($organisation_uuids, $from_date = null, $date_format = null, $format = null)
     {
         // verify the required parameter 'organisation_uuids' is set
         if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $organisation_uuids when calling getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay'
+                'Missing the required parameter $organisation_uuids when calling getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay'
             );
         }
 
-        $resourcePath = '/data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids}';
+        $resourcePath = '/data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

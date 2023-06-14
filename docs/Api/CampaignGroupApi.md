@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day
 [**getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids} | Return campaign group ad report per organisation per campaign per week
 [**getCampaignGroupAdReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day
-[**getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per campaign per day
+[**getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per account per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per day
 [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per line-item per day
 [**getCampaignGroupAnalyticsReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day
@@ -231,15 +231,15 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay()`
+## `getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay()`
 
 ```php
-getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
+getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format): string
 ```
 
-Return campaign group adform extended report per organisation per campaign per day
+Return campaign group adform extended report per organisation per account per campaign per day
 
-Campaign group adform extended report per organisation per campaign per day
+Campaign group adform extended report per organisation per account per campaign per day
 
 ### Example
 
@@ -264,10 +264,10 @@ $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
 try {
-    $result = $apiInstance->getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format);
+    $result = $apiInstance->getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay($organisation_uuids, $from_date, $date_format, $format);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CampaignGroupApi->getCampaignGroupAdformExtendedReportPerOrganisationPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CampaignGroupApi->getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
