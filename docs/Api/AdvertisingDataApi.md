@@ -11,9 +11,9 @@ Method | HTTP request | Description
 [**getAdCampaignReportPerOrganisationPerAccountPerDay()**](AdvertisingDataApi.md#getAdCampaignReportPerOrganisationPerAccountPerDay) | **GET** /data/ad-campaign-report-per-organisation-per-account-per-day/{organisationUuids} | Return ad campaign report per organisation per account per day
 [**getAdCampaigns()**](AdvertisingDataApi.md#getAdCampaigns) | **GET** /data/ad-campaigns/{organisationUuid} | Return ad campaigns by organisation
 [**getAdGroups()**](AdvertisingDataApi.md#getAdGroups) | **GET** /data/ad-groups/{organisationUuid} | Return ad groups by organisation
+[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay()**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per creative per day
 [**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per day
-[**getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay()**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-creative-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per creative per day
-[**getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay()**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per campaign per line item per day
+[**getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay()**](AdvertisingDataApi.md#getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay) | **GET** /data/adform-extended-report-per-organisation-per-account-per-campaign-per-line-item-per-day/{organisationUuids} | Return adform extended report per organisation per account per campaign per line item per day
 [**getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return bing ads extended report per organisation per account per campaign per day
 [**getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay()**](AdvertisingDataApi.md#getFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return facebook ad custom conversion report per organisation per account per campaign per day
 [**getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay()**](AdvertisingDataApi.md#getFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return facebook ad extended report per organisation per account per campaign per ad group per day
@@ -485,6 +485,72 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay()`
+
+```php
+getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay($organisation_uuids, $from_date, $date_format, $format): string
+```
+
+Return adform extended report per organisation per account per campaign per creative per day
+
+Adform extended report per organisation per account per campaign per creative per day
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
+$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$date_format = 'date_format_example'; // string | Outputted date format
+$format = 'format_example'; // string | Output format (use csv for large result sets)
+
+try {
+    $result = $apiInstance->getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay($organisation_uuids, $from_date, $date_format, $format);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AdvertisingDataApi->getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerCreativePerDay: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
+ **from_date** | **\DateTime**| From date | [optional]
+ **date_format** | **string**| Outputted date format | [optional]
+ **format** | **string**| Output format (use csv for large result sets) | [optional]
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/csv`, `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay()`
 
 ```php
@@ -551,15 +617,15 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay()`
+## `getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay()`
 
 ```php
-getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay($organisation_uuids, $from_date, $date_format, $format): string
+getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay($organisation_uuids, $from_date, $date_format, $format): string
 ```
 
-Return adform extended report per organisation per campaign per creative per day
+Return adform extended report per organisation per account per campaign per line item per day
 
-Adform extended report per organisation per campaign per creative per day
+Adform extended report per organisation per account per campaign per line item per day
 
 ### Example
 
@@ -584,76 +650,10 @@ $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
 try {
-    $result = $apiInstance->getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay($organisation_uuids, $from_date, $date_format, $format);
+    $result = $apiInstance->getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay($organisation_uuids, $from_date, $date_format, $format);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AdvertisingDataApi->getAdformExtendedReportPerOrganisationPerCampaignPerCreativePerDay: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
-
-### Return type
-
-**string**
-
-### Authorization
-
-[bearerAuth](../../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `text/csv`, `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay()`
-
-```php
-getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay($organisation_uuids, $from_date, $date_format, $format): string
-```
-
-Return adform extended report per organisation per campaign per line item per day
-
-Adform extended report per organisation per campaign per line item per day
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure Bearer authorization: bearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
-$date_format = 'date_format_example'; // string | Outputted date format
-$format = 'format_example'; // string | Output format (use csv for large result sets)
-
-try {
-    $result = $apiInstance->getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay($organisation_uuids, $from_date, $date_format, $format);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AdvertisingDataApi->getAdformExtendedReportPerOrganisationPerCampaignPerLineItemPerDay: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AdvertisingDataApi->getAdformExtendedReportPerOrganisationPerAccountPerCampaignPerLineItemPerDay: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
