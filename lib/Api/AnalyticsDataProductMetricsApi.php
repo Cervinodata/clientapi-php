@@ -1,6 +1,6 @@
 <?php
 /**
- * GenericDataApi
+ * AnalyticsDataProductMetricsApi
  * PHP version 7.4
  *
  * @category Class
@@ -41,14 +41,14 @@ use OpenAPI\Client\HeaderSelector;
 use OpenAPI\Client\ObjectSerializer;
 
 /**
- * GenericDataApi Class Doc Comment
+ * AnalyticsDataProductMetricsApi Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class GenericDataApi
+class AnalyticsDataProductMetricsApi
 {
     /**
      * @var ClientInterface
@@ -72,10 +72,10 @@ class GenericDataApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'getCampaignGroups' => [
+        'getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek' => [
             'application/json',
         ],
-        'getOrganisations' => [
+        'getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek' => [
             'application/json',
         ],
     ];
@@ -127,305 +127,38 @@ class GenericDataApi
     }
 
     /**
-     * Operation getCampaignGroups
+     * Operation getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek
      *
-     * Return campaign groups
+     * Return GA4 report per product name per organisation per property per week
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCampaignGroups'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return mixed[]
-     */
-    public function getCampaignGroups(string $contentType = self::contentTypes['getCampaignGroups'][0])
-    {
-        list($response) = $this->getCampaignGroupsWithHttpInfo($contentType);
-        return $response;
-    }
-
-    /**
-     * Operation getCampaignGroupsWithHttpInfo
-     *
-     * Return campaign groups
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCampaignGroups'] to see the possible values for this operation
-     *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of mixed[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function getCampaignGroupsWithHttpInfo(string $contentType = self::contentTypes['getCampaignGroups'][0])
-    {
-        $request = $this->getCampaignGroupsRequest($contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('mixed[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('mixed[]' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'mixed[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'mixed[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'mixed[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation getCampaignGroupsAsync
-     *
-     * Return campaign groups
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCampaignGroups'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getCampaignGroupsAsync(string $contentType = self::contentTypes['getCampaignGroups'][0])
-    {
-        return $this->getCampaignGroupsAsyncWithHttpInfo($contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation getCampaignGroupsAsyncWithHttpInfo
-     *
-     * Return campaign groups
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCampaignGroups'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function getCampaignGroupsAsyncWithHttpInfo(string $contentType = self::contentTypes['getCampaignGroups'][0])
-    {
-        $returnType = 'mixed[]';
-        $request = $this->getCampaignGroupsRequest($contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'getCampaignGroups'
-     *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCampaignGroups'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function getCampaignGroupsRequest(string $contentType = self::contentTypes['getCampaignGroups'][0])
-    {
-
-
-        $resourcePath = '/data/campaign-groups';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation getOrganisations
-     *
-     * Return organisations
-     *
-     * @param  string $format Output format (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrganisations'] to see the possible values for this operation
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
-    public function getOrganisations($format = null, string $contentType = self::contentTypes['getOrganisations'][0])
+    public function getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'][0])
     {
-        list($response) = $this->getOrganisationsWithHttpInfo($format, $contentType);
+        list($response) = $this->getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekWithHttpInfo($organisation_uuids, $contentType);
         return $response;
     }
 
     /**
-     * Operation getOrganisationsWithHttpInfo
+     * Operation getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekWithHttpInfo
      *
-     * Return organisations
+     * Return GA4 report per product name per organisation per property per week
      *
-     * @param  string $format Output format (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrganisations'] to see the possible values for this operation
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrganisationsWithHttpInfo($format = null, string $contentType = self::contentTypes['getOrganisations'][0])
+    public function getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekWithHttpInfo($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'][0])
     {
-        $request = $this->getOrganisationsRequest($format, $contentType);
+        $request = $this->getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekRequest($organisation_uuids, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -512,19 +245,19 @@ class GenericDataApi
     }
 
     /**
-     * Operation getOrganisationsAsync
+     * Operation getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekAsync
      *
-     * Return organisations
+     * Return GA4 report per product name per organisation per property per week
      *
-     * @param  string $format Output format (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrganisations'] to see the possible values for this operation
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrganisationsAsync($format = null, string $contentType = self::contentTypes['getOrganisations'][0])
+    public function getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekAsync($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'][0])
     {
-        return $this->getOrganisationsAsyncWithHttpInfo($format, $contentType)
+        return $this->getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekAsyncWithHttpInfo($organisation_uuids, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -533,20 +266,20 @@ class GenericDataApi
     }
 
     /**
-     * Operation getOrganisationsAsyncWithHttpInfo
+     * Operation getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekAsyncWithHttpInfo
      *
-     * Return organisations
+     * Return GA4 report per product name per organisation per property per week
      *
-     * @param  string $format Output format (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrganisations'] to see the possible values for this operation
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrganisationsAsyncWithHttpInfo($format = null, string $contentType = self::contentTypes['getOrganisations'][0])
+    public function getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekAsyncWithHttpInfo($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'][0])
     {
         $returnType = 'string';
-        $request = $this->getOrganisationsRequest($format, $contentType);
+        $request = $this->getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekRequest($organisation_uuids, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -585,41 +318,339 @@ class GenericDataApi
     }
 
     /**
-     * Create request for operation 'getOrganisations'
+     * Create request for operation 'getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'
      *
-     * @param  string $format Output format (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOrganisations'] to see the possible values for this operation
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrganisationsRequest($format = null, string $contentType = self::contentTypes['getOrganisations'][0])
+    public function getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeekRequest($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'][0])
     {
 
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getGA4ReportPerProductNamePerOrganisationPerPropertyPerWeek'
+            );
+        }
 
 
-        $resourcePath = '/data/organisations';
+        $resourcePath = '/data/ga4-report-per-product-name-per-organisation-per-property-per-week/{organisationUuids}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $format,
-            'format', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
 
 
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['text/csv', 'application/json', ],
+            ['text/csv', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek
+     *
+     * Return GA4 report per product sku per organisation per property per week
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return string
+     */
+    public function getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'][0])
+    {
+        list($response) = $this->getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekWithHttpInfo($organisation_uuids, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekWithHttpInfo
+     *
+     * Return GA4 report per product sku per organisation per property per week
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of string, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekWithHttpInfo($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'][0])
+    {
+        $request = $this->getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekRequest($organisation_uuids, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('string' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('string' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'string', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'string';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'string',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekAsync
+     *
+     * Return GA4 report per product sku per organisation per property per week
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekAsync($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'][0])
+    {
+        return $this->getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekAsyncWithHttpInfo($organisation_uuids, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekAsyncWithHttpInfo
+     *
+     * Return GA4 report per product sku per organisation per property per week
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekAsyncWithHttpInfo($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'][0])
+    {
+        $returnType = 'string';
+        $request = $this->getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekRequest($organisation_uuids, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'
+     *
+     * @param  string[] $organisation_uuids Organisation uuids (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeekRequest($organisation_uuids, string $contentType = self::contentTypes['getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'][0])
+    {
+
+        // verify the required parameter 'organisation_uuids' is set
+        if ($organisation_uuids === null || (is_array($organisation_uuids) && count($organisation_uuids) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $organisation_uuids when calling getGA4ReportPerProductSkuPerOrganisationPerPropertyPerWeek'
+            );
+        }
+
+
+        $resourcePath = '/data/ga4-report-per-product-sku-per-organisation-per-property-per-week/{organisationUuids}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if (is_array($organisation_uuids)) {
+            $organisation_uuids = ObjectSerializer::serializeCollection($organisation_uuids, 'csv');
+        }
+        if ($organisation_uuids !== null) {
+            $resourcePath = str_replace(
+                '{' . 'organisationUuids' . '}',
+                ObjectSerializer::toPathValue($organisation_uuids),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/csv', ],
             $contentType,
             $multipart
         );

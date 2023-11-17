@@ -1,36 +1,36 @@
 # OpenAPI\Client\CampaignGroupApi
 
-All URIs are relative to https://app.cervinodata.com/api/v1.
+All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day
-[**getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids} | Return campaign group ad report per organisation per campaign per week
-[**getCampaignGroupAdReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day
-[**getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per account per campaign per day
-[**getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per day
-[**getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per line-item per day
-[**getCampaignGroupAnalyticsReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day
-[**getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group bing ads extended report per organisation per account per campaign per day
-[**getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay()**](CampaignGroupApi.md#getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay) | **GET** /data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids} | Return campaign group doubleclick bid manager report per organisation per account per campaign per creative per day
-[**getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group doubleclick bid manager report per organisation per account per campaign per day
-[**getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-doubleclick-campaign-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group doubleclick campaign manager report per organisation per account per campaign per day
-[**getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad custom conversion report per organisation per account per campaign per day
-[**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per account per campaign per ad group per day
-[**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per account per campaign per ad per day
-[**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per campaign per day
-[**getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad report per organisation per campaign per day
-[**getCampaignGroupGoalReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupGoalReportPerOrganisationPerDay) | **GET** /data/campaign-group-goal-report-per-organisation-per-day/{organisationUuids} | Return campaign group goal report per organisation per day
-[**getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay()**](CampaignGroupApi.md#getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/campaign-group-google-ads-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return campaign group google ads extended report per organisation per account per campaign per ad group per day
-[**getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group google ads report per organisation per campaign per day
-[**getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group linkedin ads extended report per organisation per account per campaign per day
-[**getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group pinterest ads extended report per organisation per account per campaign per day
-[**getCampaignGroupReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupReportPerOrganisationPerDay) | **GET** /data/campaign-group-report-per-organisation-per-day/{organisationUuids} | Return campaign group report per organisation per day
-[**getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group snapchat ads extended report per organisation per account per campaign per day
-[**getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group tiktok ads extended report per organisation per account per campaign per day
-[**getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group twitter ads extended report per organisation per account per campaign per day
-[**getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group video report per organisation per campaign per day
-[**getCampaignGroupVideoReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids} | Return campaign group video report per organisation per day
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getCampaignGroupAdReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group ad report per organisation per campaign per day |
+| [**getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerCampaignPerWeek) | **GET** /data/campaign-group-ad-report-per-organisation-per-campaign-per-week/{organisationUuids} | Return campaign group ad report per organisation per campaign per week |
+| [**getCampaignGroupAdReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAdReportPerOrganisationPerDay) | **GET** /data/campaign-group-ad-report-per-organisation-per-day/{organisationUuids} | Return campaign group ad report per organisation per day |
+| [**getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-adform-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group adform extended report per organisation per account per campaign per day |
+| [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per day |
+| [**getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay()**](CampaignGroupApi.md#getCampaignGroupAdformReportPerOrganisationPerCampaignPerLineItemPerDay) | **GET** /data/campaign-group-adform-report-per-organisation-per-campaign-per-line-item-per-day/{organisationUuids} | Return campaign group adform report per organisation per campaign per line-item per day |
+| [**getCampaignGroupAnalyticsReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupAnalyticsReportPerOrganisationPerDay) | **GET** /data/campaign-group-analytics-report-per-organisation-per-day/{organisationUuids} | Return campaign group analytics report per organisation per day |
+| [**getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupBingAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-bing-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group bing ads extended report per organisation per account per campaign per day |
+| [**getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay()**](CampaignGroupApi.md#getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerCreativePerDay) | **GET** /data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-creative-per-day/{organisationUuids} | Return campaign group doubleclick bid manager report per organisation per account per campaign per creative per day |
+| [**getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupDoubleClickBidManagerReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-doubleclick-bid-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group doubleclick bid manager report per organisation per account per campaign per day |
+| [**getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupDoubleClickCampaignManagerReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-doubleclick-campaign-manager-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group doubleclick campaign manager report per organisation per account per campaign per day |
+| [**getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdCustomConversionReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-custom-conversion-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad custom conversion report per organisation per account per campaign per day |
+| [**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per account per campaign per ad group per day |
+| [**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerAccountPerCampaignPerAdPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-account-per-campaign-per-ad-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per account per campaign per ad per day |
+| [**getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdExtendedReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-extended-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad extended report per organisation per campaign per day |
+| [**getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupFacebookAdReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-facebook-ad-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group facebook ad report per organisation per campaign per day |
+| [**getCampaignGroupGoalReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupGoalReportPerOrganisationPerDay) | **GET** /data/campaign-group-goal-report-per-organisation-per-day/{organisationUuids} | Return campaign group goal report per organisation per day |
+| [**getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay()**](CampaignGroupApi.md#getCampaignGroupGoogleAdsExtendedReportPerOrganisationPerAccountPerCampaignPerAdGroupPerDay) | **GET** /data/campaign-group-google-ads-extended-report-per-organisation-per-account-per-campaign-per-ad-group-per-day/{organisationUuids} | Return campaign group google ads extended report per organisation per account per campaign per ad group per day |
+| [**getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupGoogleAdsReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-google-ads-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group google ads report per organisation per campaign per day |
+| [**getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupLinkedInAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-linkedin-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group linkedin ads extended report per organisation per account per campaign per day |
+| [**getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupPinterestAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-pinterest-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group pinterest ads extended report per organisation per account per campaign per day |
+| [**getCampaignGroupReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupReportPerOrganisationPerDay) | **GET** /data/campaign-group-report-per-organisation-per-day/{organisationUuids} | Return campaign group report per organisation per day |
+| [**getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupSnapchatAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-snapchat-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group snapchat ads extended report per organisation per account per campaign per day |
+| [**getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupTikTokAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-tiktok-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group tiktok ads extended report per organisation per account per campaign per day |
+| [**getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupTwitterAdsExtendedReportPerOrganisationPerAccountPerCampaignPerDay) | **GET** /data/campaign-group-twitter-ads-extended-report-per-organisation-per-account-per-campaign-per-day/{organisationUuids} | Return campaign group twitter ads extended report per organisation per account per campaign per day |
+| [**getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay()**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerCampaignPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-campaign-per-day/{organisationUuids} | Return campaign group video report per organisation per campaign per day |
+| [**getCampaignGroupVideoReportPerOrganisationPerDay()**](CampaignGroupApi.md#getCampaignGroupVideoReportPerOrganisationPerDay) | **GET** /data/campaign-group-video-report-per-organisation-per-day/{organisationUuids} | Return campaign group video report per organisation per day |
 
 
 ## `getCampaignGroupAdReportPerOrganisationPerCampaignPerDay()`
@@ -75,12 +75,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -141,12 +141,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -207,12 +207,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -273,12 +273,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -339,12 +339,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -405,12 +405,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -471,12 +471,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -537,12 +537,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -603,12 +603,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -669,12 +669,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -735,12 +735,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -801,12 +801,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -867,12 +867,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -933,12 +933,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -999,12 +999,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1065,12 +1065,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1131,12 +1131,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1197,12 +1197,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1263,12 +1263,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1329,12 +1329,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1395,12 +1395,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1461,12 +1461,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1527,12 +1527,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1593,12 +1593,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1659,12 +1659,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1725,12 +1725,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -1791,12 +1791,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 

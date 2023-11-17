@@ -1,13 +1,13 @@
 # OpenAPI\Client\AnalyticsDataGoalsApi
 
-All URIs are relative to https://app.cervinodata.com/api/v1.
+All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAnalyticsGoalReportPerCampaignPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerCampaignPerDay) | **GET** /data/analytics-goal-report-per-campaign-per-day/{organisationUuid} | Return analytics goal report per campaign per day by organisation
-[**getAnalyticsGoalReportPerChannelGroupPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerChannelGroupPerDay) | **GET** /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid} | Return analytics goal report per channel group per day by organisation
-[**getAnalyticsGoalReportPerDevicePerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerDevicePerDay) | **GET** /data/analytics-goal-report-per-device-per-day/{organisationUuid} | Return analytics goal report per device per day by organisation
-[**getAnalyticsGoalReportPerSourceMediumPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerSourceMediumPerDay) | **GET** /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid} | Return analytics goal report per source medium per day by organisation
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getAnalyticsGoalReportPerCampaignPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerCampaignPerDay) | **GET** /data/analytics-goal-report-per-campaign-per-day/{organisationUuid} | Return analytics goal report per campaign per day by organisation |
+| [**getAnalyticsGoalReportPerChannelGroupPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerChannelGroupPerDay) | **GET** /data/analytics-goal-report-per-channel-group-per-day/{organisationUuid} | Return analytics goal report per channel group per day by organisation |
+| [**getAnalyticsGoalReportPerDevicePerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerDevicePerDay) | **GET** /data/analytics-goal-report-per-device-per-day/{organisationUuid} | Return analytics goal report per device per day by organisation |
+| [**getAnalyticsGoalReportPerSourceMediumPerDay()**](AnalyticsDataGoalsApi.md#getAnalyticsGoalReportPerSourceMediumPerDay) | **GET** /data/analytics-goal-report-per-source-medium-per-day/{organisationUuid} | Return analytics goal report per source medium per day by organisation |
 
 
 ## `getAnalyticsGoalReportPerCampaignPerDay()`
@@ -52,12 +52,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -118,12 +118,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -184,12 +184,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -250,12 +250,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 

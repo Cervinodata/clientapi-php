@@ -1,11 +1,11 @@
 # OpenAPI\Client\GenericDataApi
 
-All URIs are relative to https://app.cervinodata.com/api/v1.
+All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCampaignGroups()**](GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups
-[**getOrganisations()**](GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getCampaignGroups()**](GenericDataApi.md#getCampaignGroups) | **GET** /data/campaign-groups | Return campaign groups |
+| [**getOrganisations()**](GenericDataApi.md#getOrganisations) | **GET** /data/organisations | Return organisations |
 
 
 ## `getCampaignGroups()`
@@ -104,9 +104,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **format** | **string**| Output format | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **format** | **string**| Output format | [optional] |
 
 ### Return type
 

@@ -1,15 +1,15 @@
 # OpenAPI\Client\AnalyticsDataDefaultMetricsApi
 
-All URIs are relative to https://app.cervinodata.com/api/v1.
+All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAnalyticsReportPerCampaignPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerCampaignPerDay) | **GET** /data/analytics-report-per-campaign-per-day/{organisationUuid} | Return analytics report per campaign per day by organisation
-[**getAnalyticsReportPerChannelGroupPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerChannelGroupPerDay) | **GET** /data/analytics-report-per-channel-group-per-day/{organisationUuid} | Return analytics report per channel group per day by organisation
-[**getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay) | **GET** /data/analytics-report-per-device-per-channel-group-per-organisation-per-view-per-day/{organisationUuids} | Return analytics report per device per channel group per organisation per view per day
-[**getAnalyticsReportPerDevicePerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerDay) | **GET** /data/analytics-report-per-device-per-day/{organisationUuid} | Return analytics report per device per day by organisation
-[**getAnalyticsReportPerSourceMediumPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerSourceMediumPerDay) | **GET** /data/analytics-report-per-source-medium-per-day/{organisationUuid} | Return analytics report per source medium per day by organisation
-[**getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay()**](AnalyticsDataDefaultMetricsApi.md#getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay) | **GET** /data/ga4-report-per-device-per-channel-group-per-organisation-per-property-per-day/{organisationUuids} | Return GA4 report per device per channel group per organisation per property per day
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getAnalyticsReportPerCampaignPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerCampaignPerDay) | **GET** /data/analytics-report-per-campaign-per-day/{organisationUuid} | Return analytics report per campaign per day by organisation |
+| [**getAnalyticsReportPerChannelGroupPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerChannelGroupPerDay) | **GET** /data/analytics-report-per-channel-group-per-day/{organisationUuid} | Return analytics report per channel group per day by organisation |
+| [**getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerChannelGroupPerOrganisationPerViewPerDay) | **GET** /data/analytics-report-per-device-per-channel-group-per-organisation-per-view-per-day/{organisationUuids} | Return analytics report per device per channel group per organisation per view per day |
+| [**getAnalyticsReportPerDevicePerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerDevicePerDay) | **GET** /data/analytics-report-per-device-per-day/{organisationUuid} | Return analytics report per device per day by organisation |
+| [**getAnalyticsReportPerSourceMediumPerDay()**](AnalyticsDataDefaultMetricsApi.md#getAnalyticsReportPerSourceMediumPerDay) | **GET** /data/analytics-report-per-source-medium-per-day/{organisationUuid} | Return analytics report per source medium per day by organisation |
+| [**getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay()**](AnalyticsDataDefaultMetricsApi.md#getGA4ReportPerDevicePerChannelGroupPerOrganisationPerPropertyPerDay) | **GET** /data/ga4-report-per-device-per-channel-group-per-organisation-per-property-per-day/{organisationUuids} | Return GA4 report per device per channel group per organisation per property per day |
 
 
 ## `getAnalyticsReportPerCampaignPerDay()`
@@ -54,12 +54,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -120,12 +120,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -186,12 +186,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -252,12 +252,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -318,12 +318,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuid** | **string**| Organisation uuid |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuid** | **string**| Organisation uuid | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
@@ -384,12 +384,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids |
- **from_date** | **\DateTime**| From date | [optional]
- **date_format** | **string**| Outputted date format | [optional]
- **format** | **string**| Output format (use csv for large result sets) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organisation_uuids** | [**string[]**](../Model/string.md)| Organisation uuids | |
+| **from_date** | **\DateTime**| From date | [optional] |
+| **date_format** | **string**| Outputted date format | [optional] |
+| **format** | **string**| Output format (use csv for large result sets) | [optional] |
 
 ### Return type
 
