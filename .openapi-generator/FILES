@@ -24,6 +24,7 @@ lib/Api/GenericDataApi.php
 lib/Api/ProductDataApi.php
 lib/ApiException.php
 lib/Configuration.php
+lib/FormDataProcessor.php
 lib/HeaderSelector.php
 lib/Model/ModelInterface.php
 lib/ObjectSerializer.php

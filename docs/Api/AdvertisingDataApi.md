@@ -1,5 +1,7 @@
 # OpenAPI\Client\AdvertisingDataApi
 
+
+
 All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -59,7 +61,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -187,7 +189,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuid = 'organisation_uuid_example'; // string | Organisation uuid
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -253,7 +255,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -319,7 +321,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -360,7 +362,7 @@ try {
 ## `getAdCampaigns()`
 
 ```php
-getAdCampaigns($organisation_uuid, $from_date, $format): string
+getAdCampaigns($organisation_uuid, $from_date, $include_inactive, $format): string
 ```
 
 Return ad campaigns by organisation
@@ -385,11 +387,12 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuid = 'organisation_uuid_example'; // string | Organisation uuid
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
+$include_inactive = True; // bool | Include inactive campaigns
 $format = 'format_example'; // string | Output format
 
 try {
-    $result = $apiInstance->getAdCampaigns($organisation_uuid, $from_date, $format);
+    $result = $apiInstance->getAdCampaigns($organisation_uuid, $from_date, $include_inactive, $format);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdvertisingDataApi->getAdCampaigns: ', $e->getMessage(), PHP_EOL;
@@ -402,6 +405,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organisation_uuid** | **string**| Organisation uuid | |
 | **from_date** | **\DateTime**| From date | [optional] |
+| **include_inactive** | **bool**| Include inactive campaigns | [optional] |
 | **format** | **string**| Output format | [optional] |
 
 ### Return type
@@ -424,7 +428,7 @@ try {
 ## `getAdGroups()`
 
 ```php
-getAdGroups($organisation_uuid, $from_date, $format): string
+getAdGroups($organisation_uuid, $from_date, $include_inactive, $format): string
 ```
 
 Return ad groups by organisation
@@ -449,11 +453,12 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuid = 'organisation_uuid_example'; // string | Organisation uuid
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
+$include_inactive = True; // bool | Include inactive ad groups
 $format = 'format_example'; // string | Output format
 
 try {
-    $result = $apiInstance->getAdGroups($organisation_uuid, $from_date, $format);
+    $result = $apiInstance->getAdGroups($organisation_uuid, $from_date, $include_inactive, $format);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AdvertisingDataApi->getAdGroups: ', $e->getMessage(), PHP_EOL;
@@ -466,6 +471,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **organisation_uuid** | **string**| Organisation uuid | |
 | **from_date** | **\DateTime**| From date | [optional] |
+| **include_inactive** | **bool**| Include inactive ad groups | [optional] |
 | **format** | **string**| Output format | [optional] |
 
 ### Return type
@@ -513,7 +519,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -579,7 +585,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -645,7 +651,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -711,7 +717,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -777,7 +783,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -843,7 +849,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -909,7 +915,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -975,7 +981,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1041,7 +1047,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1107,7 +1113,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1173,7 +1179,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1239,7 +1245,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1305,7 +1311,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1371,7 +1377,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1437,7 +1443,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1503,7 +1509,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1569,7 +1575,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1635,7 +1641,7 @@ $apiInstance = new OpenAPI\Client\Api\AdvertisingDataApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 

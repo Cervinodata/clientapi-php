@@ -1,5 +1,7 @@
 # OpenAPI\Client\CampaignGroupApi
 
+
+
 All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -61,7 +63,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -127,7 +129,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -193,7 +195,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -259,7 +261,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -325,7 +327,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -391,7 +393,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -457,7 +459,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -523,7 +525,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -589,7 +591,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -655,7 +657,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -721,7 +723,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -787,7 +789,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -853,7 +855,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -919,7 +921,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -985,7 +987,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1051,7 +1053,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1117,7 +1119,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1183,7 +1185,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1249,7 +1251,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1315,7 +1317,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1381,7 +1383,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1447,7 +1449,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1513,7 +1515,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1579,7 +1581,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1645,7 +1647,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1711,7 +1713,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 
@@ -1777,7 +1779,7 @@ $apiInstance = new OpenAPI\Client\Api\CampaignGroupApi(
     $config
 );
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
-$from_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | From date
+$from_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | From date
 $date_format = 'date_format_example'; // string | Outputted date format
 $format = 'format_example'; // string | Output format (use csv for large result sets)
 

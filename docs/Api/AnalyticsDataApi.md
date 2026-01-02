@@ -1,5 +1,7 @@
 # OpenAPI\Client\AnalyticsDataApi
 
+
+
 All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |

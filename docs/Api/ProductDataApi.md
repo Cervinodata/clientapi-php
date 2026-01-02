@@ -1,16 +1,18 @@
 # OpenAPI\Client\ProductDataApi
 
+
+
 All URIs are relative to https://app.cervinodata.com/api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0()**](ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month |
+| [**getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth()**](ProductDataApi.md#getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth) | **GET** /data/ga4-report-per-channel-group-per-product-name-per-organisation-per-property-per-month/{organisationUuids} | Return GA4 report per channel group per product name per organisation per property per month |
 
 
-## `getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0()`
+## `getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth()`
 
 ```php
-getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0($organisation_uuids): string
+getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth($organisation_uuids): string
 ```
 
 Return GA4 report per channel group per product name per organisation per property per month
@@ -37,10 +39,10 @@ $apiInstance = new OpenAPI\Client\Api\ProductDataApi(
 $organisation_uuids = array('organisation_uuids_example'); // string[] | Organisation uuids
 
 try {
-    $result = $apiInstance->getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0($organisation_uuids);
+    $result = $apiInstance->getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth($organisation_uuids);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductDataApi->getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth_0: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductDataApi->getGA4ReportPerChannelGroupPerProductNamePerOrganisationPerPropertyPerMonth: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
